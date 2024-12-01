@@ -1,0 +1,81 @@
+
+.reviews-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  
+  .reviews-hero {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .reviews-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .reviews-hero p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  
+  .reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .review-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .review-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .review-card .review-feedback {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+    font-style: italic;
+  }
+  
+  .review-card .review-author {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #777;
+  }
+  
+  .review-card .review-rating {
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: bold;
+  }
+  
+
+  @media (max-width: 768px) {
+    .reviews-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .review-card {
+      width: 90%;
+    }
+  }
+  

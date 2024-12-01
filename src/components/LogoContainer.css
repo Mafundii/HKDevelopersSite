@@ -1,0 +1,17 @@
+.logo-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 50px; 
+    background-image: url('../assets/construction_background.png');
+    background-size: cover; 
+    background-position: center; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .navbar-logo {
+    max-width: 500px; 
+    height: auto;
+    background-color: transparent; 
+  }
+  
