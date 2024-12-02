@@ -1,50 +1,88 @@
+/* Navbar Container */
 .navbar {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: space-between; /* Space between logo, links, and burger */
+  align-items: center; /* Vertically align items */
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
-  width: 100%; 
-  background-color: #fff; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  z-index: 1000; 
-  padding: 10px 0; 
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px 20px;
 }
 
+/* Navbar Links */
 .navbar-links {
-  display: flex; 
-  list-style: none; 
-  margin: 0; 
-  padding: 0; 
+  display: flex;
+  list-style: none;
+  margin: 0 auto; /* Center align the links */
+  padding: 0;
 }
 
 .nav-item {
-  margin: 0 15px; 
+  margin: 0 15px;
 }
 
 .nav-link {
   padding: 10px 15px;
-  text-decoration: none; 
+  text-decoration: none;
   color: #333;
   font-weight: bold;
-  transition: color 0.3s ease; 
+  transition: color 0.3s ease;
 }
 
 .nav-link.active {
-  color: #008080; 
+  color: #008080;
 }
 
 .nav-link:hover {
-  color: #008080; 
+  color: #008080;
 }
 
-.highlight-bar {
-  position: absolute;
+/* Burger Button */
+.burger-button {
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-line {
+  width: 100%;
   height: 3px;
-  background-color: #008080; 
-  bottom: 0; 
-  left: 0;
-  width: 0;
-  transition: transform 0.3s ease, width 0.3s ease; 
+  background-color: #333;
+  border-radius: 2px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .burger-button {
+    display: flex; /* Show burger on small screens */
+  }
+
+  .navbar-links {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+
+  .navbar-links.open {
+    display: flex; /* Show links when burger is toggled */
+  }
+
+  .nav-item {
+    margin: 10px 0; /* Adjust spacing for vertical layout */
+  }
 }

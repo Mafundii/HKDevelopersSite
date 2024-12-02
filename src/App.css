@@ -6,7 +6,7 @@
 }
 
 .content {
-    position: relative; /* Ensures it's above the particles */
-    z-index: 1; /* Higher than the particles */
+    position: relative; 
+    z-index: 1; 
   }
   

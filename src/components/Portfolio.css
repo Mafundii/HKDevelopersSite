@@ -45,16 +45,27 @@
   
  
   .portfolio-page {
-    font-family: Arial, sans-serif;
-    padding: 20px;
     text-align: center;
   }
   
   .portfolio-hero {
-    background-color: #f4f4f4;
-    padding: 50px 20px;
-    border-bottom: 1px solid #ddd;
-  }
+    background-color: transparent; /* Remove the gray background */
+    text-align: center; /* Center-align text */
+    margin-bottom: 30px; /* Add spacing similar to Contact page */
+}
+
+.portfolio-hero h1 {
+    font-size: 2.5rem; /* Match font size of Contact title */
+    margin-bottom: 20px; /* Same margin as Contact page */
+    color: #1E3932; /* Match the green color used in Contact page */
+}
+
+.portfolio-hero p {
+    font-size: 1rem; /* Match font size of Contact description */
+    color: #555; /* Match Contact description color */
+    margin-bottom: 20px; /* Match spacing */
+}
+
   
   .portfolio-container {
     display: grid;
