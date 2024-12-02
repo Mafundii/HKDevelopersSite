@@ -15,3 +15,14 @@
     background-color: transparent; 
   }
   
+  @media (max-width: 768px) {
+    .navbar-logo {
+      width: 200px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar-logo {
+      width: 150px; 
+    }
+  }
