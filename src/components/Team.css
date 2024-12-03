@@ -74,16 +74,38 @@
   margin-top: 0;
 }
 
+/* Left and Right Profiles */
+.team-member.left {
+  transform: translateX(-200px) scale(1); /* Adjust position for left profile */
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.team-member.right {
+  transform: translateX(200px) scale(1); /* Adjust position for right profile */
+  opacity: 0.8;
+  z-index: 1;
+}
+
 /* Hidden Profiles */
 .team-member.hidden {
+  transform: translateX(300px) scale(0.8);
   opacity: 0;
   pointer-events: none;
 }
 
 /* Responsive Design */
+
+/* Tablet View: max-width 768px */
 @media (max-width: 768px) {
   .team-container {
     height: 300px;
+  }
+
+  .team-member.left,
+  .team-member.right {
+    transform: translateX(-150px) scale(0.9); /* Slightly reduce translation */
+    opacity: 0.6;
   }
 
   .team-member.center img {
@@ -100,9 +122,15 @@
   }
 }
 
+/* Mobile View: max-width 480px */
 @media (max-width: 480px) {
   .team-container {
     height: 250px;
+  }
+
+  .team-member.left,
+  .team-member.right {
+    display: none; /* Hide left and right profiles on mobile */
   }
 
   .team-member.center img {
@@ -119,7 +147,7 @@
   }
 
   .team-instructions {
-    font-size: 0.85rem; /* Slightly smaller text for mobile */
+    font-size: 0.85rem;
     margin-bottom: 10px;
   }
 }
