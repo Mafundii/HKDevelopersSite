@@ -30,8 +30,8 @@ function App() {
           <LoadingScreen />
         ) : (
           <div className="content">
-            <LogoContainer />
             <Navbar />
+            <LogoContainer />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />

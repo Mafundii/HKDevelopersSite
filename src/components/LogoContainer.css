@@ -2,14 +2,13 @@
     display: flex;
     justify-content: center; 
     align-items: center;
-    padding: 8% 0 8% 0; 
+    padding: 4% 0 8% 0; 
     background-image: url('../assets/construction_background.png');
     background-size: cover; 
     background-position: center; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    width: 100vw;
     max-width: 100%;
-    margin: 0;
+    margin-top: 30px;
   }
   
   .navbar-logo {
@@ -19,13 +18,19 @@
   }
   
   @media (max-width: 768px) {
+    .logo-container {
+      margin-top: 30px; 
+    }
     .navbar-logo {
-      width: 200px; 
+      width: 300px; 
     }
   }
   
   @media (max-width: 480px) {
+    .logo-container {
+      margin-top: 30px; 
+    }
     .navbar-logo {
-      width: 150px; 
+      width: 200px; 
     }
   }
