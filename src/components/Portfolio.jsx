@@ -34,7 +34,7 @@ const Portfolio = () => {
   return (
     <div className="portfolio-page">
       <div className="portfolio-hero">
-        <h1>Our Portfolio</h1>
+        <h1>OUR PORTFOLIO</h1>
         <p>Explore a selection of our previous projects showcasing our commitment to quality and innovation.</p>
       </div>
 

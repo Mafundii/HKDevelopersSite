@@ -22,7 +22,7 @@ function Navbar() {
             className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
             onClick={closeMenu} // Close menu on navigation
           >
-            Home
+            HOME
           </NavLink>
         </li>
         <li className="nav-item">
@@ -31,7 +31,7 @@ function Navbar() {
             className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
             onClick={closeMenu} // Close menu on navigation
           >
-            About
+            ABOUT
           </NavLink>
         </li>
         <li className="nav-item">
@@ -40,7 +40,7 @@ function Navbar() {
             className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
             onClick={closeMenu} // Close menu on navigation
           >
-            Contact
+            CONTACT
           </NavLink>
         </li>
         <li className="nav-item">
@@ -49,7 +49,7 @@ function Navbar() {
             className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
             onClick={closeMenu} // Close menu on navigation
           >
-            Reviews
+            REVIEWS
           </NavLink>
         </li>
         <li className="nav-item">
@@ -58,7 +58,7 @@ function Navbar() {
             className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
             onClick={closeMenu} // Close menu on navigation
           >
-            Portfolio
+            PORTFOLIO
           </NavLink>
         </li>
       </ul>

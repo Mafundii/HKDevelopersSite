@@ -5,7 +5,7 @@ import "../components/About.css";
 function About() {
   return (
     <div>
-      <h1 className="about-title">About HKDevelopers</h1>
+      <h1 className="about-title">ABOUT US</h1>
       <p className="about-text">
   We believe that great results come from great teams. Our team is composed of
   highly skilled and experienced professionals who are passionate about delivering exceptional

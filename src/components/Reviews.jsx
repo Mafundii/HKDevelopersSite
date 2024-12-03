@@ -36,7 +36,7 @@ const Reviews = () => {
   return (
     <div className="reviews-page">
       <div className="reviews-hero">
-        <h1>Customer Reviews</h1>
+        <h1>CUSTOMER REVIEWS</h1>
         <p>See what our clients have to say about their experiences with HKDevelopers.</p>
       </div>
 
