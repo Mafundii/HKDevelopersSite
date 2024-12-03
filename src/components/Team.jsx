@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import "./Team.css";
 import teamMembers from "../data/teamMembers";
 import Info from "./Info";
@@ -16,11 +17,7 @@ function Team() {
   };
 
   const handleInfoClick = () => {
-    if (infoBoxOpen) {
-      setInfoBoxOpen(false);
-    } else {
-      setInfoBoxOpen(true);
-    }
+    setInfoBoxOpen(!infoBoxOpen);
   };
 
   const closeInfo = () => {
@@ -29,24 +26,31 @@ function Team() {
 
   const getPositionClass = (index) => {
     if (index === activeIndex) return "center";
-    if (index === (activeIndex - 1 + teamMembers.length) % teamMembers.length) return "left";
-    if (index === (activeIndex + 1) % teamMembers.length) return "right";
-    return "hidden";
+    return "hidden"; // Only show the central profile on mobile
   };
+
+  // Swipe handlers
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => handleProfileClick("right"),
+    onSwipedRight: () => handleProfileClick("left"),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
 
   return (
     <div>
-      <div className="team-container">
+      {/* Instructional Text */}
+      <div className="team-instructions">
+        <p>Swipe left or right to explore more employees. Tap to see more details!</p>
+      </div>
+
+      <div {...swipeHandlers} className="team-container">
         {teamMembers.map((member, index) => (
           <div
             key={member.id}
             className={`team-member ${getPositionClass(index)}`}
             onClick={() =>
-              getPositionClass(index) === "left"
-                ? handleProfileClick("left")
-                : getPositionClass(index) === "right"
-                ? handleProfileClick("right")
-                : handleInfoClick()
+              getPositionClass(index) === "center" ? handleInfoClick() : null
             }
           >
             <img src={member.imgSrc} alt={member.name} />
@@ -55,6 +59,7 @@ function Team() {
           </div>
         ))}
       </div>
+
       {infoBoxOpen && (
         <Info activeMember={teamMembers[activeIndex]} closeInfo={closeInfo} />
       )}

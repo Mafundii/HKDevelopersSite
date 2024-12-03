@@ -19,6 +19,7 @@
   list-style: none;
   margin: 0 auto; /* Center align the links */
   padding: 0;
+  overflow: hidden;
 }
 
 .nav-item {
@@ -60,6 +61,13 @@
   border-radius: 2px;
 }
 
+.navbar-page-name {
+  color: #D9D9D9;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar {
@@ -76,19 +84,40 @@
     display: none; /* Hide links by default */
     flex-direction: column;
     position: absolute;
-    top: 100%;
     left: 0;
+    top: 100%;
     width: 100%;
-    background-color: #fff;
+    background-color: #d9d9d9;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
+    
+  }
+
+  .nav-link {
+    color: #022A2B;
+  }
+
+  .nav-link.active {
+    color: #599595;
+  }
+  
+  .nav-link:hover {
+    color: #599595;
   }
 
   .navbar-links.open {
     display: flex; /* Show links when burger is toggled */
+    
   }
 
   .nav-item {
     margin: 10px 0; /* Adjust spacing for vertical layout */
+    margin-left: auto;
+    margin-right: 8%;
+    color: #D9D9D9;
+  }
+
+  .navbar-page-name {
+    font-size: 16px; /* Slightly smaller on mobile */
   }
 }
